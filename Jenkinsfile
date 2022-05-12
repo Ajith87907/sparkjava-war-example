@@ -23,10 +23,10 @@ pipeline {
       stage("deploy") {
         steps {
           sh"""
-            if ["$ENV" = "DEV"]
+            if [ "$ENV" = "DEV" ]
             then
             echo "Deploying to DEV"
-            elif ["$ENV" = "QA"]
+            elif [ "$ENV" = "QA" ]
             then
             echo "Deploying to QA"
             else
