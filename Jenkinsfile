@@ -11,8 +11,6 @@ pipeline {
         stage(“building_code”) { 
            steps { 
               sh ’./mvnw clean package’ 
-            	sh ‘mv target/*.war target/myweb.war’ 
-                 echo “build successful” 
           } 
       } 
        stage(“deploy”) { 
