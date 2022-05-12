@@ -1,21 +1,21 @@
 pipeline { 
   agent any 
     stages { 
-       stage (“git checkout”) { 
+       stage(“git_checkout”) { 
            steps { 
               echo “cloning repository”	
               git 'https://github.com/Ajith87907/sparkjava-war-example.git' 
               echo “repo cloned successfully” 
               } 
          } 
-        stage (“building code”) { 
+        stage(“building_code”) { 
            steps { 
               sh ’./mvnw clean package’ 
             	sh ‘mv target/*.war target/myweb.war’ 
                  echo “build successful” 
           } 
       } 
-       stage (“deploy”) { 
+       stage(“deploy”) { 
          steps { 
            sshagent([‘tomcat-dev1’]) 
            sh “”” 
