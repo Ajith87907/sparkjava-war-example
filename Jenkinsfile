@@ -31,6 +31,7 @@ pipeline {
             echo "Deploying to QA"
             else
             echo "Not deploying"
+	    fi
             """
 	}
       }
