@@ -13,5 +13,4 @@ pipeline {
               sh ’./mvnw clean package’ 
           } 
       } 
-    }
-}
+    }}
