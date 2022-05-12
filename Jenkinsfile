@@ -25,7 +25,7 @@ pipeline {
           sh"""
             if ["$ENV" = "DEV"]
             then
-            echo "Deploying to $ENV"
+            echo "Deploying to DEV"
             elif ["$ENV" = "QA"]
             then
             echo "Deploying to QA"
