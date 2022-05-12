@@ -15,12 +15,7 @@ pipeline {
       } 
        stage(“deploy”) { 
          steps { 
-           sshagent([‘tomcat-dev1’]) 
-           sh “”” 
-           scp –o StringHostKeyChecking=no target/myweb.war 
-           ubuntu@yourip:/opt/tomcat/webapps/ 
-           ssh ubuntu@yourip /opt/tomcat/bin/startup.sh 
-             “”” 
+        echo "hello"
             } 
         } 
     }
