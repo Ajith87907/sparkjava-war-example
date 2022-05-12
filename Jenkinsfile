@@ -13,10 +13,5 @@ pipeline {
               sh ’./mvnw clean package’ 
           } 
       } 
-       stage(“deploy”) { 
-         steps { 
-        echo "hello"
-         }
-       }
     }
 }
