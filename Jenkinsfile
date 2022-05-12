@@ -32,6 +32,7 @@ pipeline {
             else
             echo "Not deploying"
             """
-            
+	}
+      }
     }
 }
