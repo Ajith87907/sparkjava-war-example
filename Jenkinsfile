@@ -13,7 +13,7 @@ pipeline {
          } 
         stage("building_code") { 
            steps { 
-              sh './mvnw clean package' 
+              sh 'mvn clean package' 
           } 
       } 
     }
