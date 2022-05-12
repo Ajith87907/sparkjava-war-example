@@ -1,5 +1,9 @@
 pipeline { 
   agent any 
+  parameters {
+        string(name:'ENV', defaultValue: 'DEV', description: 'enter your environment')
+	      
+    }
   tools {
     maven 'maven-3.8'
   }
@@ -16,5 +20,18 @@ pipeline {
               sh 'mvn clean package' 
           } 
       } 
+      stage("deploy") {
+        steps {
+          sh"""
+            if ["ENV" = "DEV"]
+            then
+            Echo "Deploying to $ENV"
+            elif ["ENV"] = "QA"]
+            then
+            echo "Deploying to QA"
+            else
+            echo "Not deploying"
+            """
+            
     }
 }
