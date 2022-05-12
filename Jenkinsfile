@@ -30,7 +30,7 @@ pipeline {
             then
             echo "Deploying to QA"
             else
-            echo "Not deploying"
+            echo "Not deploying $ENV"
 	    fi
             """
 	}
